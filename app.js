@@ -28,8 +28,18 @@ module = angular.module('app', ['ui.router']);
 
 module.config([
   '$urlRouterProvider', '$stateProvider', '$locationProvider', '$sceProvider', (function($urlRouterProvider, $stateProvider, $locationProvider, $sceProvider) {
-    $locationProvider.html5Mode(true);
     $urlRouterProvider.otherwise('/');
+    $stateProvider.state({
+      name: "home",
+      url: "/",
+      views: {
+        '': {
+          templateUrl: function() {
+            return "templates/first-page.html";
+          }
+        }
+      }
+    });
     $stateProvider.state({
       name: "contacts",
       url: "/contacts",
@@ -55,16 +65,12 @@ module.config([
   })
 ]);
 
-module.controller('main', [
-  '$rootScope', '$scope', '$http', '$location', '$timeout', '$log', (function($rootScope, $scope, $http, $location, $timeout, $log) {
-    $scope.screen = 'first';
-  })
-]);
+module.controller('main', ['$rootScope', '$scope', '$http', '$location', '$timeout', '$log', (function($rootScope, $scope, $http, $location, $timeout, $log) {})]);
 
 
 
 },{}],"/Users/Trikster/static_sites/Uniservice/_Uniservice/src/javascript/util.coffee":[function(require,module,exports){
-var calcWidthOrHeight, fixSize;
+var fixSize;
 
 $(function() {
   fixSize();
@@ -73,43 +79,7 @@ $(function() {
   }));
 });
 
-fixSize = (function() {
-  var wh, ww;
-  wh = window.innerHeight;
-  ww = window.innerWidth;
-  $('#first-screen').css({
-    width: ww
-  }).css({
-    height: wh
-  });
-});
-
-calcWidthOrHeight = (function() {
-  var height, heightFunc, width, widthFunc;
-  heightFunc = function() {
-    return window.innerHeight;
-  };
-  widthFunc = function() {
-    return window.innerWidth - height * 264 / 420;
-  };
-  height = heightFunc();
-  width = widthFunc();
-  if (height >= width) {
-    $('.img-painter').css({
-      width: width
-    }).css({
-      height: 'auto'
-    }).css({
-      marginTop: height - width
-    });
-  } else {
-    $('.img-painter').css({
-      height: height
-    }).css({
-      width: 'auto'
-    });
-  }
-});
+fixSize = (function() {});
 
 
 
