@@ -28,7 +28,6 @@ module = angular.module('app', ['ui.router']);
 
 module.config([
   '$urlRouterProvider', '$stateProvider', '$locationProvider', '$sceProvider', (function($urlRouterProvider, $stateProvider, $locationProvider, $sceProvider) {
-    $sceProvider.enabled(false);
     $locationProvider.html5Mode(true);
     $urlRouterProvider.otherwise('/');
     $stateProvider.state({
