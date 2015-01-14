@@ -102,6 +102,74 @@ module.config([
   })
 ]);
 
+module.directive('yandexMap', [
+  '$http', '$rootScope', (function($http, $rootScope) {
+    return {
+      restrict: 'A',
+      link: (function($scope, element, attrs) {
+        var init;
+        init = (function() {
+          var myGeoObject, myMap;
+          myMap = new ymaps.Map("map", {
+            center: [54.955, 22.327222],
+            zoom: 12,
+            controls: ['smallMapDefaultSet']
+          });
+          myGeoObject = new ymaps.GeoObject({
+            geometry: {
+              type: "Polygon",
+              coordinates: [[[54.955, 22.327222], [54.959722, 22.3475], [54.955278, 22.349444], [54.960556, 22.361389], [54.959722, 22.365278], [54.963611, 22.365278], [54.963333, 22.373056], [54.9625, 22.376667], [54.956111, 22.375556], [54.951944, 22.368333], [54.942778, 22.383333], [54.936667, 22.369722], [54.938056, 22.362778], [54.935556, 22.356111], [54.944722, 22.341111], [54.95, 22.349167], [54.950833, 22.346389], [54.954444, 22.3475], [54.950278, 22.331389]]],
+              fillRule: "nonZero"
+            },
+            properties: {
+              balloonContent: "Многоугольник"
+            }
+          }, {
+            fillColor: '#7BC64D',
+            strokeColor: '#000000',
+            opacity: 0.5,
+            strokeWidth: 2
+          });
+          myMap.geoObjects.add(myGeoObject);
+        });
+        ymaps.ready(init);
+      })
+    };
+  })
+]);
+
+module.directive('photoFieldGallery', [
+  '$http', '$rootScope', '$timeout', (function($http, $rootScope, $timeout) {
+    return {
+      restrict: 'A',
+      link: (function($scope, element, attrs) {
+        var fixSize, i, _i;
+        $scope.photoArray = [];
+        for (i = _i = 1; _i <= 7; i = ++_i) {
+          $scope.photoArray.push('field0' + i);
+        }
+        $scope.selected = 'field01';
+        $timeout(function() {
+          return fixSize();
+        }, 0);
+        $(window).on('resize', (function() {
+          fixSize();
+        }));
+        fixSize = (function() {
+          var width;
+          width = $('.photo-gallery .main-img').width();
+          $('.photo-gallery .small-img').css({
+            width: (width - 2) / $scope.photoArray.length
+          });
+        });
+        $scope.selectPhoto = (function(index) {
+          $scope.selected = $scope.photoArray[index];
+        });
+      })
+    };
+  })
+]);
+
 
 
 },{}],"/Users/Trikster/static_sites/Uniservice/_Uniservice/src/javascript/util.coffee":[function(require,module,exports){

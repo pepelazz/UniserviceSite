@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="53px" height="51px" viewBox="0 0 53 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.0.4 (8054) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="house28" sketch:type="MSLayerGroup" fill="#FFFFFF">
+            <path d="M51.062,24.398 C51.994,23.373 51.904,21.802 50.861,20.89 L27.884,0.785 C26.841,-0.127 25.169,-0.108 24.148,0.828 L1.093,21.962 C0.072,22.898 0.022,24.467 0.982,25.465 L1.56,26.067 C2.519,27.065 4.069,27.184 5.02,26.332 L6.743,24.789 L6.743,47.379 C6.743,48.765 7.866,49.887 9.251,49.887 L18.238,49.887 C19.623,49.887 20.746,48.765 20.746,47.379 L20.746,31.575 L32.209,31.575 L32.209,47.379 C32.189,48.764 33.18,49.886 34.565,49.886 L44.089,49.886 C45.474,49.886 46.597,48.764 46.597,47.378 L46.597,25.107 C46.597,25.107 47.073,25.524 47.66,26.04 C48.246,26.555 49.477,26.142 50.409,25.116 L51.062,24.398 L51.062,24.398 Z" id="Shape" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>
