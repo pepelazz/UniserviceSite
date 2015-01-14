@@ -213,88 +213,88 @@ html {
   }
 }
 
-#projects .article .article-text {
+#projects .article .article-text, #about .article .article-text {
   width: 74.57627%;
   float: left;
 }
 @media (max-width: 768px) {
-  #projects .article .article-text {
+  #projects .article .article-text, #about .article .article-text {
     width: 100%;
     float: left;
     margin-left: 0;
     margin-right: 0;
   }
 }
-#projects .article .article-text p:first-child {
+#projects .article .article-text p:first-child, #about .article .article-text p:first-child {
   margin-top: 0;
 }
-#projects .article .article-text .full-width {
+#projects .article .article-text .full-width, #about .article .article-text .full-width {
   width: 100%;
 }
-#projects .article .article-text .stat-table {
+#projects .article .article-text .stat-table, #about .article .article-text .stat-table {
   width: 60%;
   margin: 0 auto;
 }
-#projects .article .article-text .stat-table tr:hover td {
+#projects .article .article-text .stat-table tr:hover td, #about .article .article-text .stat-table tr:hover td {
   background-color: #b8e1e7;
 }
-#projects .article .article-text .stat-table td:first-child {
+#projects .article .article-text .stat-table td:first-child, #about .article .article-text .stat-table td:first-child {
   width: 80%;
 }
-#projects .article .article-text .stat-table td:last-child {
+#projects .article .article-text .stat-table td:last-child, #about .article .article-text .stat-table td:last-child {
   text-align: right;
 }
-#projects .article .article-text .photo-gallery {
+#projects .article .article-text .photo-gallery, #about .article .article-text .photo-gallery {
   position: relative;
   width: 100%;
   overflow: hidden;
 }
-#projects .article .article-text .photo-gallery .main-img {
+#projects .article .article-text .photo-gallery .main-img, #about .article .article-text .photo-gallery .main-img {
   width: 100%;
 }
-#projects .article .article-text .photo-gallery .main-img img {
+#projects .article .article-text .photo-gallery .main-img img, #about .article .article-text .photo-gallery .main-img img {
   width: 100%;
 }
-#projects .article .article-text .photo-gallery ul {
+#projects .article .article-text .photo-gallery ul, #about .article .article-text .photo-gallery ul {
   list-style: none;
   padding: 0;
   margin: 0;
   width: 100%;
 }
-#projects .article .article-text .photo-gallery ul li {
+#projects .article .article-text .photo-gallery ul li, #about .article .article-text .photo-gallery ul li {
   overflow: hidden;
   float: left;
   opacity: 0.5;
   cursor: pointer;
 }
-#projects .article .article-text .photo-gallery ul li:hover {
+#projects .article .article-text .photo-gallery ul li:hover, #about .article .article-text .photo-gallery ul li:hover {
   opacity: 0.8;
 }
-#projects .article .article-text .photo-gallery ul li img {
+#projects .article .article-text .photo-gallery ul li img, #about .article .article-text .photo-gallery ul li img {
   width: 100%;
   padding-right: 0.3rem;
   box-sizing: border-box;
 }
-#projects .article .article-sidebar {
+#projects .article .article-sidebar, #about .article .article-sidebar {
   width: 23.72881%;
   float: left;
   padding-left: 2rem;
   box-sizing: border-box;
 }
 @media (max-width: 768px) {
-  #projects .article .article-sidebar {
+  #projects .article .article-sidebar, #about .article .article-sidebar {
     width: 100%;
     float: left;
     margin-left: 0;
     margin-right: 0;
   }
 }
-#projects .article .article-sidebar img {
+#projects .article .article-sidebar img, #about .article .article-sidebar img {
   width: 100%;
   margin-bottom: 1rem;
 }
 @media (max-width: 768px) {
-  #projects .article .article-sidebar .img-phone-hide {
+  #projects .article .article-sidebar .img-phone-hide, #about .article .article-sidebar .img-phone-hide {
     display: none;
   }
 }
@@ -302,6 +302,10 @@ html {
 #map {
   width: 100%;
   height: 30rem;
+}
+
+.footer-forest {
+  width: 100%;
 }
 
 /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguY3NzIiwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZXMiOlsiaW5kZXguc2FzcyJdLCJzb3VyY2VzQ29udGVudCI6WyJAaW1wb3J0IFwiY29tcGFzcy9jc3MzL3RyYW5zaXRpb25cIlxuXG5AaW1wb3J0IFwic3VzeVwiXG5AaW1wb3J0IFwiYnJlYWtwb2ludFwiXG5AaW1wb3J0IFwibW9kdWxhci1zY2FsZVwiXG5cbi8vLS0tIFZhcmlhYmxlc1xuLy9tZWRpYVxuJGJyZWFrLXBob25lOiAgIDYwMHB4XG4kYnJlYWstc21hbGw6ICAgNzY4cHhcbiRicmVhay1tZWRpdW06ICA5OTJweFxuJGJyZWFrLTExNTA6ICAgIDExNTBweFxuJGJyZWFrLWxhcmdlOiAgMTI0MHB4XG5cbi8vY29sb3JzXG4kY29sb3ItYmc6ICNERUYxRjRcbiRjb2xvci1ncmVlbjogIzhCQkYwMFxuJGNvbG9yLWJsdWU6ICMwMDczQUVcblxuXG4vL3NpemVzXG5cbiR3aWRlLWJvcmRlcjogNSVcblxuLy8tLS0gTWl4aW5zXG5cblxuXG5AbWl4aW4gYnRuKCRiZy1jb2xvciwkY29sb3IpXG4gIGJvcmRlcjogMXB4IHNvbGlkICMwMDAwMDBcbiAgcGFkZGluZzogNXB4IDEycHggNXB4IDEwcHhcbiAgYmFja2dyb3VuZDogJGJnLWNvbG9yXG4gIGNvbG9yOiAkY29sb3JcbiAgaVxuICAgIGZvbnQtc2l6ZTogMTVweFxuICAgIG1hcmdpbi1yaWdodDogNHB4XG4gICY6aG92ZXJcbiAgICBiYWNrZ3JvdW5kOiBkYXJrZW4oJGJnLWNvbG9yLCAxMCUpXG4gICAgY29sb3I6IGxpZ2h0ZW4oJGNvbG9yLCAzMCUpXG5cbkBtaXhpbiBob3Jpem9udGFsLWxpc3QoJG1hcmdpbi1yaWdodClcbiAgbGlzdC1zdHlsZS10eXBlOiBub25lXG4gIG1hcmdpbjogMFxuICBsaVxuICAgIGZsb2F0OiBsZWZ0XG4gICAgbWFyZ2luLXJpZ2h0OiAkbWFyZ2luLXJpZ2h0XG5cblxuQGltcG9ydCBcImxpYi9yZXNwb25zaXZlXCJcbkBpbXBvcnQgXCJwYXJ0aWFscy9taXhpbnNcIlxuQGltcG9ydCBcInBhcnRpYWxzL2ZvbnRzXCJcbkBpbXBvcnQgXCJwYXJ0aWFscy9sb2FkZXJcIlxuQGltcG9ydCBcInBhcnRpYWxzL3N0eWxlXCIiXSwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0= */
