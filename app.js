@@ -73,6 +73,10 @@ module.controller('main', [
         return $rootScope.firstScreenIsShown = false;
       }
     };
+    $scope.language = {
+      ru: true,
+      eng: false
+    };
   })
 ]);
 
@@ -182,7 +186,11 @@ $(function() {
   }));
 });
 
-fixSize = (function() {});
+fixSize = (function() {
+  $('#first-screen').css({
+    height: window.innerHeight
+  });
+});
 
 
 
